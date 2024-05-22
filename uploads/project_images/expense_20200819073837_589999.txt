@@ -1,0 +1,39 @@
+https://cloud.google.com/maps-platform/
+
+AIzaSyCzj-NP-Vj8dqq7X9V9iO3-WY89kDquPOI
+
+
+
+
+245098,245070
+
+DELETE FROM `patient_updates` WHERE `patient_id`=210514;
+DELETE FROM `patient_tests` WHERE `patient_id`=210514;
+DELETE FROM `patients` WHERE id=210514;
+
+
+
+DELETE FROM `patient_updates` WHERE `patient_id` IN (210514);
+DELETE FROM `patient_tests` WHERE `patient_id` IN (210514);
+DELETE FROM `patients` WHERE id IN (210514);
+
+
+
+
+
+COVID19/PAK/AJ/550/20/1007512
+COVID19/PAK/AJ/550/20/1122908
+duplicate of:
+COVID19/PAK/AJ/550/20/1122806
+
+
+4230152216187 Duplicate 4 records
+
+
+creation of posts on normal budget against the project title 
+
+
+
+
+
+
