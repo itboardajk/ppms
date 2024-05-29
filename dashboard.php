@@ -45,6 +45,13 @@ exit;
                             </div>
                             <div class="btn-box-row row-fluid">
                                 <div class="span8">
+                                    <?php if ( authorizeAccess('inventory', 'view') && count($inventory_items)>0) :?>
+                                    <div class="row-fluid">
+                                    <?php foreach ($inventory_items as $key => $item): ?>
+                                        <a href="Javascript:;" class="btn-box small span3"><?=htmlspecialchars_decode($item['item_icon']);?><b><?= $item['item_name'] ?></b> <b><?= intval($item['total_stock_in'])-intval($item['total_stock_out']) ?></b></a>
+                                    <?php endforeach; ?>
+                                    </div>
+                                    <?php endif; ?>
                                     <div class="row-fluid">
                                         <div class="span12">
                                              <?php if(authorizeAccess('users','view')){?><a href="admins.php" class="btn-box small span6"><i class="icon-group"></i><b>Users</b></a><?php }?>

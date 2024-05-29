@@ -1,0 +1,5 @@
+
+# Ignore the db_config file in the classes folder
+classes/config_db.php
+uploads/*
+

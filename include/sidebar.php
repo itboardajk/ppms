@@ -42,6 +42,15 @@
 				    	$ccounts["Total"] += $proect['total'];
 					}
 					//var_dump($ccounts);
+
+
+					/** -----Var Dump--------- */
+					$inventory_items = $crud->getData("SELECT it.*,
+                                SUM(CASE WHEN t.transaction_type = 'stockIn' THEN t.quantity ELSE 0 END)  as total_stock_in,
+                                SUM(CASE WHEN t.transaction_type = 'stockOut' THEN t.quantity ELSE 0 END)  as total_stock_out  
+                                from inventory_items it  join inventory_transactions t on t.item_id = it.item_id 
+                                GROUP BY it.item_id
+                                ORDER BY it.item_id DESC");
 					
 					?>
 					<ul id="toggleProjects" class="collapse in unstyled" style="height: auto;">										

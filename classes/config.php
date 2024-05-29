@@ -19,9 +19,11 @@ require 'classes/PHPMailer/src/SMTP.php';
 include_once("classes/validation.php");
 include_once("classes/crud.php");
 include_once("classes/emails.php");
+include_once("classes/generalModal.php");
 
  
 $crud = new Crud();
+$generalmodal = new GeneralModal();
 $validation = new Validation();
 
 if(isset($_GET['sucmsg']) && !empty($_GET['sucmsg']))
@@ -317,4 +319,45 @@ function dd($data, $d=true){
     if($d){
         die;
     }
+}
+function displayLimitedListItems($data, $limit = 5)
+{
+    if ($data === '') {
+        echo "Null";
+        return;
+    }
+
+    $dataArray = explode(",", $data);
+    $totalItems = count($dataArray);
+    
+    echo "<ul class='serial-list'>";
+    for ($i = 0; $i < $totalItems; $i++) {
+        $style = $i >= $limit ? 'style="display: none;"' : ''; // Hide items after the limit
+        echo "<li $style>$dataArray[$i]</li>";
+    }
+    echo "</ul>";
+    
+    if ($totalItems > $limit) {
+        // Add a "Read More" link with an onClick event to toggle list items
+        echo '<a href="#" onclick="toggleListItems(this, ' . 10 . ')">Show More..</a>';
+    }
+
+    // Add JavaScript for toggling list items
+    echo '<script>
+        function toggleListItems(link, limit) {
+            // Get the parent ul element
+            var ul = link.previousElementSibling;
+            // Find all list items in the ul
+            var items = ul.getElementsByTagName("li");
+            // Toggle the visibility of items beyond the limit
+            var isShowingMore = link.textContent.trim() === "Show More..";
+            
+            for (var i = limit; i < items.length; i++) {
+                items[i].style.display = isShowingMore ? "list-item" : "none";
+            }
+            
+            // Change the link text based on the current state
+            link.textContent = isShowingMore ? "Show Less" : "Show More";
+        }
+    </script>';
 }

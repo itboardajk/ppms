@@ -1708,6 +1708,124 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 .otherItems {
 	margin-top: 6px;
 }
+.select2 {
+    max-width: 100%;
+    width: 100% !important;
+}
+.stockout td .serial-list li {
+		color: #fff;
+		margin: 2px;
+		background-color: #dd7234;
+		border: 1px solid #df520e;
+		padding: 1px 12px;
+} 
+
+.inventory-details {
+    background: #f5f5f5;
+    margin-top: -15px !important;
+	padding: 40px;
+    text-align: center;
+}
+.inventory-details .card {
+	position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .06);
+    border-radius: .25rem;
+} 
+.inventory-details  .card-body {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		min-height: 1px;
+		padding: 1.5rem;
+	}
+.media {
+	display: flex;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+.d-flex {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.align-self-center {
+    -webkit-align-self: center !important;
+    -ms-flex-item-align: center !important;
+    align-self: center !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.card-box.large i {
+    font-size: 24px;
+    line-height: 24px;
+    height: 24px;
+}
+ .card-box b {
+    display: block;
+}
+.card-box.large i {
+    font-size: 50px;
+    line-height: 43px;
+    height: 24px;
+	color: #14888f;
+}
+.card-box b {
+    color: #444;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 5px;
+    text-shadow: 0 1px 0 #fff;
+}
+.card-box.large p { 
+	font-size: 13px;
+}
+.card-box.large span { 
+	font-size: 13px;
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	margin: 5px 0px;
+	row-gap: 50px;
+	column-gap: 50px;
+  }
+  .grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid #c9c9c9cc;
+	min-height: 90px;
+	padding: 8px;
+	font-size: 30px;
+	text-align: center;
+
+  }
+  .inventory-heading {
+	background-color: #2d2b32;
+	text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 9px;
+  }
+  .inventory-heading h3 { 
+	color: #ffffff;
+  }
+  .card, .card-footer, .card-header {
+    background-color: #FFF;
+	}
 /* --------End Inventory Page--------------- */
 @media(max-width:767px){body{padding:0!important}.wrapper{padding:20px 15px}}
 
