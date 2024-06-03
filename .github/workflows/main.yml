@@ -14,6 +14,6 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: ppms.ajk.gov.pk
-        username: gitftp@ppms.ajk.gov.pk
-        password: yyyyy
+        server: 101.50.86.119
+        username: ppms@ppms.admin.gok.pk
+        password: $~h~D%K7sQ+]
