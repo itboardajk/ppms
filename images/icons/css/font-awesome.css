@@ -541,4 +541,7 @@ ul.icons li [class*=" icon-"] {
 
 
 /*------------------ New icons------------- */
+.icon-server:before      { content: "\e900"; }
+
+
 

@@ -117,7 +117,7 @@ if ($viewFlag) {
         </div>
         <div class="stream-list">
             <div class="media stream">
-                <div class="media-body inventory-body">
+                <div class="media-body inventory-body" style="min-width: 96%;">
                     <div class="stream-headline">
                         <div class="btn-controls">
                             <div class="btn-box-row row-fluid">
